@@ -37,6 +37,11 @@ The probability to reject the _null hypothesis_ when an _alternative hypothesis_
 
 # Usual Statistical tests:
 
+## t-test and Wilcoxon rank-sum test:
+
+Here, we present the most widely used statistical test called t-test and its counterpart in the non parametric world.
+
+
 # Non parametric versus parametric test approach:
 
 Non parametric tests approach construct statistic test based on the sample distribution and don't rely on any parameters that describe the population as opposed to parametric test which state that population distribution can be summarized by numerical parameters. One such example is the **Kruskall Wallis test** which is an alternative to ANOVA when sample size is small but also when normality assumption is violated.
