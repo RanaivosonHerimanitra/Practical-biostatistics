@@ -23,7 +23,11 @@ distribution to infer **parameters** of the population.
 
 ## The jargon:
 
-In sample, we can calculate a statistic and get its _standard deviation_ which is also called _standard error__. _standard deviation_ reflects the **spread** of the distribution of the statistics we are interested in
+Within a sample, we can calculate a statistic and get its _standard deviation_ which is also called _standard error_ . _standard deviation_ reflects the **spread** of the distribution of the statistics we are interested in.
+
+We can do more with our sample by guessing its confident interval. A numerical interval from within which **true** parameters should fluctuate by calculating what we call _standard error_ by the following formula:
+
+$$ SE=\sigma/\sqrt(n) $$
 
 # Type of uncertainty and statistical power:
 
