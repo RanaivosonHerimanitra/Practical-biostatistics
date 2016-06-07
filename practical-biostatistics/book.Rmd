@@ -29,6 +29,8 @@ We can do more with our sample by guessing its confident interval. A numerical i
 
 $$ SE=\sigma/\sqrt(n) $$
 
+## Law of large number and the Central Limit Theorem 
+
 # Type of uncertainty and statistical power:
 
 Statistical power is the dark side of sample size calculation. Survey statisticians often get confused because they used to apply classical sampling theories drawn from survey design methodologies (strata allocation, multistage sampling,etc.) whereas Biostatisticians are more likely to encounter the former when designing their randomized controlled trial studies. As a Biostatistician, you need to master both as health studies may be observational as well as experimental like RCT. So what is statistical power ?
@@ -85,7 +87,19 @@ We would like to draw conclusion on 02 population proportions $$ D=p{1} - p{2} $
 
 # Study design in traditional survey:
 
-# Study design in Epidemiology:
+# Study design in Public Health:
+
+## Sample size in a clinical trial:
+
+Sample size determination is key in trial design. In fact, a well designed trial is a trial that has required sample size to detect clinically meaningful difference between treatment groups.
+
+In most randomized trial, the goal is to demonstrate the _superiority_ of a new regimen (new treatment) with respect to standard or existing one.
+
+Clinical trial can be divided in 02 groups depending on their goal:
+
+* Superiority trial which attempts to demonstrate the _superiority_ of a new treatment as previously stated.
+
+* Non inferiority trial which attempts to demonstrate the _equivalence_ of let's say 02 concurrent treatments.
 
 # Application in development economics:
 
