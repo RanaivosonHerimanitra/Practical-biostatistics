@@ -8,7 +8,7 @@ documentclass: book
 #bibliography: [book.bib, packages.bib]
 #biblio-style: apalike
 link-citations: yes
-#github-repo: rstudio/bookdown-demo
+github-repo: RanaivosonHerimanitra/Practical-biostatistics
 description: "A curated list of resources for statisticians, social scientists, biologists, students involved in data analysis and interpretation tasks such as inferential statistics, Bioinformatics. All with straightforward application using R and/or Python programming languages."
 ---
 
@@ -18,15 +18,22 @@ A curated list of resources for statisticians, social scientists, biologists, st
 
 # Sample distribution and confidence interval
 
+Statisticians never start out knowing the average in the population. They use sampling 
+distribution to infer **parameters** of the population. 
+
+## The jargon:
+
+In sample, we can calculate a statistic and get its _standard deviation_ which is also called _standard error__. _standard deviation_ reflects the **spread** of the distribution of the statistics we are interested in
+
 # Type of uncertainty and statistical power:
 
 Statistical power is the dark side of sample size calculation. Survey statisticians often get confused because they used to apply classical sampling theories drawn from survey design methodologies (strata allocation, multistage sampling,etc.) whereas Biostatisticians are more likely to encounter the former when designing their randomized controlled trial studies. As a Biostatistician, you need to master both as health studies may be observational as well as experimental like RCT. So what is statistical power ?
 
 When designing an experiment, one needs to define hypotheses testing:
 
-* a null hypothesis (an hypothesis that is more likely to appear ) and
+* A null hypothesis ( either an hypothesis that is more likely to appear either an hypothesis we want to test against ) and
 
-* an alternative hypothesis
+* An alternative hypothesis
 
 Once, they are defined, you can predict the range of values for your statistics of interest that you expect to see if the null hypothesis is true. After data collection, you calculate your statistics and its <code>p-value</code>. If <code>p-value</code> is small enough (let's say less than 5%), you encounter a statistics that is not expect (because It is less than 5%) based on null hypothesis an vice versa.
 The statistical power is the probability of finding true effect when It actually exists. It directly relates to incertainty during our decision to reject or null the null hypothesis.
@@ -93,7 +100,7 @@ Is used to jointly assess effects of multiple covariates on an outcome.???
 * Crude odds-ratio
 * Don't forget to mention formula of Mantel-Haenszel 
 * Confidence interval for odds-ratio
-* Propensity score matching: can be useful when controlling for multiple confounders because it combines candidate confounders into a single summary score. Distinguish cases depending on type of studies. [https://courses.edx.org/courses/HarvardX/PH207x/2012_Fall/courseware/Week_10/week10:epi10/](here)
+* Propensity score matching: can be useful when controlling for multiple confounders because it combines candidate confounders into a single summary score. Distinguish cases depending on type of  [https://courses.edx.org/courses/HarvardX/PH207x/2012_Fall/courseware/Week_10/week10:epi10/](studies).
 
 * Classification using logistic regression (Sensitivity: is the capacity of a statistical test to detect true when It's observed to be true (in reality).)
 
@@ -101,7 +108,7 @@ Is used to jointly assess effects of multiple covariates on an outcome.???
 
 ## Cox proportional hazard regression:
 
-When we study cohort of patients
+When we study a cohort of patients
 
 ## Machine Learning in public health:
 
