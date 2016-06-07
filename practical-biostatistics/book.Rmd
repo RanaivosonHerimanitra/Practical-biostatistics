@@ -24,7 +24,7 @@ The probability to reject the _null hypothesis_ when an _alternative hypothesis_
 
 # Non parametric versus parametric test approach:
 
-Non parametric statistics approach construct statistic test based on the sample distribution and doesn't rely on parameters that describe the population as opposed to parametric test which state that population distribution can be summarized by numerical parameters.
+Non parametric tests approach construct statistic test based on the sample distribution and don't rely on any parameters that describe the population as opposed to parametric test which state that population distribution can be summarized by numerical parameters. One such example is the **Kruskall Wallis test** which is an alternative to ANOVA when sample size is small but also when normality assumption is violated.
 
 ## Different types of variables association:
 
