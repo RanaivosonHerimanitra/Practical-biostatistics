@@ -29,6 +29,14 @@ We can do more with our sample by guessing its confident interval. A numerical i
 
 $$ SE=\sigma/\sqrt(n) $$
 
+In case of proportion (our statistics of interest), _standard error_ can be written as follows:
+
+$$ SE=\sqrt( p(1-p) / n )  $$
+
+where standard deviation of proportion is:
+
+$$ \sigma = \sqrt(p(1-p)) $$
+
 ## Law of large number and the Central Limit Theorem 
 
 # Type of uncertainty and statistical power:
