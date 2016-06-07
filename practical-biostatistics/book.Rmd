@@ -20,7 +20,22 @@ A curated list of resources for statisticians, social scientists, biologists, st
 
 # Type of uncertainty and statistical power:
 
-The probability to reject the _null hypothesis_ when an _alternative hypothesis_ is true, under a certain study conditions, is called power of a statistical test. Suppose we are a given statistic on mean weight (55 kg) of population in a given village. We are interested in a nutritional survey that concerns people with a mean weight of 50 with a standard deviation of 5kg. We randomly sampled 35 people and then asked to find true population mean of 50 at the 5% level of significance. The probability associated with this level of confidence is called power of the test.
+Statistical power is the dark side of sample size calculation. Survey statisticians often get confused because they used to apply classical sampling theories drawn from survey design methodologies (strata allocation, multistage sampling,etc.) whereas Biostatisticians are more likely to encounter the former when designing their randomized controlled trial studies. As a Biostatistician, you need to master both as health studies may be observational as well as experimental like RCT. So what is statistical power ?
+
+When designing an experiment, one needs to define hypotheses testing:
+
+* a null hypothesis (an hypothesis that is more likely to appear ) and
+
+* an alternative hypothesis
+
+Once, they are defined, you can predict the range of values for your statistics of interest that you expect to see if the null hypothesis is true. After data collection, you calculate your statistics and its <code>p-value</code>. If <code>p-value</code> is small enough (let's say less than 5%), you encounter a statistics that is not expect (because It is less than 5%) based on null hypothesis an vice versa.
+The statistical power is the probability of finding true effect when It exists. It directly relates to incertainty during our decision to reject or null the null hypothesis.
+
+**Summary:**
+
+The probability to reject the _null hypothesis_ when an _alternative hypothesis_ is true, under a certain study conditions, is then called power of a statistical test. Suppose we are a given statistic on mean weight (55 kg) of population in a given village. We are interested in a nutritional survey that concerns people with a mean weight of 50 with a standard deviation of 5kg. We randomly sampled 35 people and then asked to find true population mean of 50 at the 5% level of significance. The probability associated with this level of confidence is called **_statistical power_**.
+
+# Usual Statistical tests:
 
 # Non parametric versus parametric test approach:
 
