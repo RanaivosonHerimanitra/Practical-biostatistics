@@ -27,15 +27,15 @@ Within a sample, we can calculate a statistic and get its _standard deviation_ w
 
 We can do more with our sample by guessing its confident interval. A numerical interval from within which **true** parameters should fluctuate by calculating what we call _standard error_ by the following formula:
 
-$$ SE=\sigma/\sqrt(n) $$
+$$ SE=\sigma/\sqrt{n} $$
 
 In case of proportion (our statistics of interest), _standard error_ can be written as follows:
 
-$$ SE=\sqrt( p(1-p) / n )  $$
+$$ SE=\sqrt{ p(1-p) / n }  $$
 
-where standard deviation of proportion is:
+where standard deviation of a binomial proportion is:
 
-$$ \sigma = \sqrt(p(1-p)) $$
+$$ \sigma = \sqrt {p(1-p)} $$
 
 ## Law of large number and the Central Limit Theorem 
 
@@ -56,12 +56,49 @@ The statistical power is the probability of finding true effect when It actually
 
 The probability to reject the _null hypothesis_ when an _alternative hypothesis_ is true, under a certain study conditions, is then called power of a statistical test. Suppose we are a given statistic on mean weight (55 kg) of population in a given village. We are interested in a nutritional survey that concerns people with a mean weight of 50 with a standard deviation of 5kg. We randomly sampled 35 people and then asked to find true population mean of 50 at the 5% level of significance. The probability associated with this level of confidence is called **_statistical power_**.
 
-# Usual Statistical tests:
+# Usual Statistical tests by goals:
 
-## t-test and Wilcoxon rank-sum test:
+## Comparison of proportions:
 
-Here, we present the most widely used statistical test called t-test and its counterpart in the non parametric world.
+### Chisquare test
 
+### Fisher exact test
+
+### Mantel-Haenszel test
+
+## Comparison of means:
+
+### student t-test:
+
+## Comparison of medians:
+
+### Wilcoxon test:
+Is used when comparing an observed median with a theoretical one.
+
+### Mann-Whitney test:
+
+Is used when comparing two observed medians
+
+### Kruskall-Wallis test:
+Is used to compare at least 02 observed medians.
+
+## Comparison of variances:
+
+### Fisher-Snedecor and Ansari-Bradley tests:
+Are used to compare two observed variance.
+### Bartlett and Fligner- Killeen tests:
+Are used to compare at least 02 observed variances.
+
+## Comparison of distribution:
+
+### Chisquare goodness of fit:
+Adequation of a sampling distribution to a theoretical one.
+
+### Kolmogorov-Smirnov test:
+Adequation of a sampling distribution to a theoretical one.
+
+### Shapiro-Wilk test:
+Adequation of a sampling distribution to a theoretical one.
 
 # Non parametric versus parametric test approach:
 
@@ -93,25 +130,202 @@ We would like to draw conclusion on 02 population proportions $$ D=p{1} - p{2} $
 
 (4) $$ n{2}(1-p{2})>10 $$
 
-# Study design in traditional survey:
+# Study design in traditional surveys:
 
-# Study design in Public Health:
+# Study design in clinical trials:
 
-## Sample size in a clinical trial:
+## Overview of Clinical Trials
+ * Introduction
+ * Phases of Clinical Trials and Objectives
+ * The Clinical Development Plan
+ * Biostatistical Aspects of a Protocol
 
+
+## Treatment Comparisons in Clinical Trials
+ * Data from Clinical Trials
+ * Statistical Models for Treatment Comparisons
+ * application using R
+ 
+## Treatment Comparisons in Clinical Trials with Covariates
+ * Data from Clinical Trials
+ * Statistical Models Incorporating Covariates
+ * application using R
+ 
+## Analysis of Clinical Trials with Time-to-Event Endpoints
+ * Clinical Trials with Time-to-Event Data
+ * Statistical Models
+ * Statistical Methods for Right-Censored Data
+ * Statistical Methods for Interval-Censored Data
+ * Step-by-Step Implementations in R
+
+## Analysis of Data from Longitudinal Clinical Trials
+ * Clinical Trials
+ * Statistical Models
+ * Analysis of Data from Longitudinal Clinical Trials
+
+## Meta-Analysis of Clinical Trials
+ * Data from Clinical Trials
+ * Statistical Models for Meta-Analysis
+ * Meta-Analysis of Data in R
+
+## Bayesian Analysis Methods in Clinical Trials
+* Bayesian Models
+* R Packages in Bayesian Modeling
+* MCMC Simulations
+* Bayesian Data Analysis
+
+## Analysis of Bioequivalence Clinical Trials
+* Data from Bioequivalence Clinical Trials
+* Bioequivalence Clinical Trial Endpoints
+* Statistical Methods to Analyze Bioequivalence
+* Step-by-Step Implementation in R
+
+## Analysis of Adverse Events in Clinical Trials
+ * Adverse Event Data from a Clinical Trial
+ * Statistical Methods
+ * Step-by-Step Implementation in R
+
+## Analysis of DNA Microarrays in Clinical Trials
+ * DNA Microarray
+ * Breast Cancer Data
+
+## Sample Size Determination and Power Calculation in Clinical Trials
+* Prerequisites for Sample Size Determination:
 Sample size determination is key in trial design. In fact, a well designed trial is a trial that has required sample size to detect clinically meaningful difference between treatment groups.
-
 In most randomized trial, the goal is to demonstrate the _superiority_ of a new regimen (new treatment) with respect to standard or existing one.
-
 Clinical trial can be divided in 02 groups depending on their goal:
 
 * Superiority trial which attempts to demonstrate the _superiority_ of a new treatment as previously stated.
 
 * Non inferiority trial which attempts to demonstrate the _equivalence_ of let's say 02 concurrent treatments.
 
-# Application in development economics:
+### Considerations Prior to Sample Size Calculation
+*  Confounding and Interaction
+*  One-Sided Test versus Two-Sided Test
+*  Crossover Design versus Parallel Design
+*  Subgroup/Interim Analyses
+*  Data Transformation
+*  Practical Issues
+
+### Comparing Means
+*  One-Sample Design
+*  Two-Sample Parallel Design
+*  Two-Sample Crossover Design
+*  Multiple-Sample One-Way ANOVA
+*  Multiple-Sample Williams Design
+
+
+### Large Sample Tests for Proportions
+*  One-Sample Design
+*  Two-Sample Parallel Design
+*  Two-Sample Crossover Design
+*  One-Way Analysis of Variance
+*  Williams Design
+*  Relative Risk—Parallel Design
+*  Relative Risk—Crossover Design
+
+
+
+### Exact Tests for Proportions
+*  Binomial Test
+*  Fisher’s Exact Test
+*  Optimal Multiple-Stage Designs for Single Arm Trials
+*  Flexible Designs for Multiple-Arm Trials
+
+### Tests for Goodness-of-Fit and Contingency Tables
+*  Tests for Goodness-of-Fit
+*  Test for Independence—Single Stratum
+*  Test for Independence—Multiple Strata
+*  Test for Categorical Shift
+*  Carry-Over Effect Test
+
+
+### Comparing Time-to-Event Data
+*  Basic Concepts
+*  Exponential Model
+*  Cox’s Proportional Hazards Model
+*  Weighted Log-Rank Test
+
+### Group Sequential Methods
+* Pocock’s Test
+* O’Brien and Fleming’s Test
+* Wang and Tsiatis’ Test
+* Inner Wedge Test
+* Binary Variables
+* Time-to-Event Data
+* Alpha Spending Function
+* Sample Size Re-Estimation
+* Conditional Power
+
+### Comparing Variabilities
+*  Comparing Intra-Subject Variabilities
+*  Comparing Intra-Subject CVs
+*  Comparing Inter-Subject Variabilities
+*  Comparing Total Variabilities
+
+### Bioequivalence Testing
+*  Bioequivalence Criteria
+*  Average Bioequivalence
+*  Population Bioequivalence
+*  Individual Bioequivalence
+*  In Vitro Bioequivalence
+
+### Dose Response Studies
+*  Continuous Response
+*  Binary Response
+*  Time-to-Event Endpoint
+*  Williams’ Test for Minimum Effective Dose (MED)
+*  Cochran–Armitage’s Test for Trend
+*  Dose Escalation Trials
+
+### Microarray Studies
+*  Literature Review
+*  False Discovery Rate (FRD) Control
+*  Family-Wise Error Rate (FWER) Control
+
+
+### Bayesian Sample Size Calculation
+*  Posterior Credible Interval Approach
+*  Posterior Error Approach
+*  The Bootstrap-Median Approach
+
+
+### Nonparametrics
+*  Violation of Assumptions
+*  One-Sample Location Problem
+*  Two-Sample Location Problem
+*  Test for Independence
+
+
+### Sample Size Calculation in Other Areas
+*  QT/QTc Studies with Time-Dependent Replicates
+*  Propensity Analysis in Nonrandomized Studies
+*  ANOVA with Repeated Measures
+*  Quality of Life
+*  Bridging Studies
+*  Vaccine Clinical Trials
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Statistical modelling in Epidemiology:
+
+# Application in development economics:
 
 ## Linear regression and how to interpret results:
 

@@ -38,8 +38,8 @@ MathJax.Hub.Config({
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="sample-distribution-and-confidence-interval.html">
-<link rel="next" href="usual-statistical-tests-by-goals.html">
+<link rel="prev" href="study-design-in-traditional-surveys.html">
+<link rel="next" href="statistical-modelling-in-epidemiology.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -160,25 +160,249 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="type-of-uncertainty-and-statistical-power" class="section level1">
-<h1><span class="header-section-number">3</span> Type of uncertainty and statistical power:</h1>
-<p>Statistical power is the dark side of sample size calculation. Survey statisticians often get confused because they used to apply classical sampling theories drawn from survey design methodologies (strata allocation, multistage sampling,etc.) whereas Biostatisticians are more likely to encounter the former when designing their randomized controlled trial studies. As a Biostatistician, you need to master both as health studies may be observational as well as experimental like RCT. So what is statistical power ?</p>
-<p>When designing an experiment, one needs to define hypotheses testing:</p>
+<div id="study-design-in-clinical-trials" class="section level1">
+<h1><span class="header-section-number">7</span> Study design in clinical trials:</h1>
+<div id="overview-of-clinical-trials" class="section level2">
+<h2><span class="header-section-number">7.1</span> Overview of Clinical Trials</h2>
 <ul>
-<li><p>A null hypothesis ( either an hypothesis that is more likely to appear either an hypothesis we want to test against ) and</p></li>
-<li><p>An alternative hypothesis</p></li>
+<li>Introduction</li>
+<li>Phases of Clinical Trials and Objectives</li>
+<li>The Clinical Development Plan</li>
+<li>Biostatistical Aspects of a Protocol</li>
 </ul>
-<p>Once, they are defined, you can predict the range of values for your statistics of interest that you expect to see if the null hypothesis is true. After data collection, you calculate your statistics and its <code>p-value</code>. If <code>p-value</code> is small enough (let’s say less than 5%), you encounter a statistics that is not expect (because It is less than 5%) based on null hypothesis an vice versa. The statistical power is the probability of finding true effect when It actually exists. It directly relates to incertainty during our decision to reject or null the null hypothesis.</p>
-<p><strong>Summary:</strong></p>
-<p>The probability to reject the <em>null hypothesis</em> when an <em>alternative hypothesis</em> is true, under a certain study conditions, is then called power of a statistical test. Suppose we are a given statistic on mean weight (55 kg) of population in a given village. We are interested in a nutritional survey that concerns people with a mean weight of 50 with a standard deviation of 5kg. We randomly sampled 35 people and then asked to find true population mean of 50 at the 5% level of significance. The probability associated with this level of confidence is called <strong><em>statistical power</em></strong>.</p>
+</div>
+<div id="treatment-comparisons-in-clinical-trials" class="section level2">
+<h2><span class="header-section-number">7.2</span> Treatment Comparisons in Clinical Trials</h2>
+<ul>
+<li>Data from Clinical Trials</li>
+<li>Statistical Models for Treatment Comparisons</li>
+<li>application using R</li>
+</ul>
+</div>
+<div id="treatment-comparisons-in-clinical-trials-with-covariates" class="section level2">
+<h2><span class="header-section-number">7.3</span> Treatment Comparisons in Clinical Trials with Covariates</h2>
+<ul>
+<li>Data from Clinical Trials</li>
+<li>Statistical Models Incorporating Covariates</li>
+<li>application using R</li>
+</ul>
+</div>
+<div id="analysis-of-clinical-trials-with-time-to-event-endpoints" class="section level2">
+<h2><span class="header-section-number">7.4</span> Analysis of Clinical Trials with Time-to-Event Endpoints</h2>
+<ul>
+<li>Clinical Trials with Time-to-Event Data</li>
+<li>Statistical Models</li>
+<li>Statistical Methods for Right-Censored Data</li>
+<li>Statistical Methods for Interval-Censored Data</li>
+<li>Step-by-Step Implementations in R</li>
+</ul>
+</div>
+<div id="analysis-of-data-from-longitudinal-clinical-trials" class="section level2">
+<h2><span class="header-section-number">7.5</span> Analysis of Data from Longitudinal Clinical Trials</h2>
+<ul>
+<li>Clinical Trials</li>
+<li>Statistical Models</li>
+<li>Analysis of Data from Longitudinal Clinical Trials</li>
+</ul>
+</div>
+<div id="meta-analysis-of-clinical-trials" class="section level2">
+<h2><span class="header-section-number">7.6</span> Meta-Analysis of Clinical Trials</h2>
+<ul>
+<li>Data from Clinical Trials</li>
+<li>Statistical Models for Meta-Analysis</li>
+<li>Meta-Analysis of Data in R</li>
+</ul>
+</div>
+<div id="bayesian-analysis-methods-in-clinical-trials" class="section level2">
+<h2><span class="header-section-number">7.7</span> Bayesian Analysis Methods in Clinical Trials</h2>
+<ul>
+<li>Bayesian Models</li>
+<li>R Packages in Bayesian Modeling</li>
+<li>MCMC Simulations</li>
+<li>Bayesian Data Analysis</li>
+</ul>
+</div>
+<div id="analysis-of-bioequivalence-clinical-trials" class="section level2">
+<h2><span class="header-section-number">7.8</span> Analysis of Bioequivalence Clinical Trials</h2>
+<ul>
+<li>Data from Bioequivalence Clinical Trials</li>
+<li>Bioequivalence Clinical Trial Endpoints</li>
+<li>Statistical Methods to Analyze Bioequivalence</li>
+<li>Step-by-Step Implementation in R</li>
+</ul>
+</div>
+<div id="analysis-of-adverse-events-in-clinical-trials" class="section level2">
+<h2><span class="header-section-number">7.9</span> Analysis of Adverse Events in Clinical Trials</h2>
+<ul>
+<li>Adverse Event Data from a Clinical Trial</li>
+<li>Statistical Methods</li>
+<li>Step-by-Step Implementation in R</li>
+</ul>
+</div>
+<div id="analysis-of-dna-microarrays-in-clinical-trials" class="section level2">
+<h2><span class="header-section-number">7.10</span> Analysis of DNA Microarrays in Clinical Trials</h2>
+<ul>
+<li>DNA Microarray</li>
+<li>Breast Cancer Data</li>
+</ul>
+</div>
+<div id="sample-size-determination-and-power-calculation-in-clinical-trials" class="section level2">
+<h2><span class="header-section-number">7.11</span> Sample Size Determination and Power Calculation in Clinical Trials</h2>
+<ul>
+<li><p>Prerequisites for Sample Size Determination: Sample size determination is key in trial design. In fact, a well designed trial is a trial that has required sample size to detect clinically meaningful difference between treatment groups. In most randomized trial, the goal is to demonstrate the <em>superiority</em> of a new regimen (new treatment) with respect to standard or existing one. Clinical trial can be divided in 02 groups depending on their goal:</p></li>
+<li><p>Superiority trial which attempts to demonstrate the <em>superiority</em> of a new treatment as previously stated.</p></li>
+<li><p>Non inferiority trial which attempts to demonstrate the <em>equivalence</em> of let’s say 02 concurrent treatments.</p></li>
+</ul>
+<div id="considerations-prior-to-sample-size-calculation" class="section level3">
+<h3><span class="header-section-number">7.11.1</span> Considerations Prior to Sample Size Calculation</h3>
+<ul>
+<li>Confounding and Interaction</li>
+<li>One-Sided Test versus Two-Sided Test</li>
+<li>Crossover Design versus Parallel Design</li>
+<li>Subgroup/Interim Analyses</li>
+<li>Data Transformation</li>
+<li>Practical Issues</li>
+</ul>
+</div>
+<div id="comparing-means" class="section level3">
+<h3><span class="header-section-number">7.11.2</span> Comparing Means</h3>
+<ul>
+<li>One-Sample Design</li>
+<li>Two-Sample Parallel Design</li>
+<li>Two-Sample Crossover Design</li>
+<li>Multiple-Sample One-Way ANOVA</li>
+<li>Multiple-Sample Williams Design</li>
+</ul>
+</div>
+<div id="large-sample-tests-for-proportions" class="section level3">
+<h3><span class="header-section-number">7.11.3</span> Large Sample Tests for Proportions</h3>
+<ul>
+<li>One-Sample Design</li>
+<li>Two-Sample Parallel Design</li>
+<li>Two-Sample Crossover Design</li>
+<li>One-Way Analysis of Variance</li>
+<li>Williams Design</li>
+<li>Relative Risk—Parallel Design</li>
+<li>Relative Risk—Crossover Design</li>
+</ul>
+</div>
+<div id="exact-tests-for-proportions" class="section level3">
+<h3><span class="header-section-number">7.11.4</span> Exact Tests for Proportions</h3>
+<ul>
+<li>Binomial Test</li>
+<li>Fisher’s Exact Test</li>
+<li>Optimal Multiple-Stage Designs for Single Arm Trials</li>
+<li>Flexible Designs for Multiple-Arm Trials</li>
+</ul>
+</div>
+<div id="tests-for-goodness-of-fit-and-contingency-tables" class="section level3">
+<h3><span class="header-section-number">7.11.5</span> Tests for Goodness-of-Fit and Contingency Tables</h3>
+<ul>
+<li>Tests for Goodness-of-Fit</li>
+<li>Test for Independence—Single Stratum</li>
+<li>Test for Independence—Multiple Strata</li>
+<li>Test for Categorical Shift</li>
+<li>Carry-Over Effect Test</li>
+</ul>
+</div>
+<div id="comparing-time-to-event-data" class="section level3">
+<h3><span class="header-section-number">7.11.6</span> Comparing Time-to-Event Data</h3>
+<ul>
+<li>Basic Concepts</li>
+<li>Exponential Model</li>
+<li>Cox’s Proportional Hazards Model</li>
+<li>Weighted Log-Rank Test</li>
+</ul>
+</div>
+<div id="group-sequential-methods" class="section level3">
+<h3><span class="header-section-number">7.11.7</span> Group Sequential Methods</h3>
+<ul>
+<li>Pocock’s Test</li>
+<li>O’Brien and Fleming’s Test</li>
+<li>Wang and Tsiatis’ Test</li>
+<li>Inner Wedge Test</li>
+<li>Binary Variables</li>
+<li>Time-to-Event Data</li>
+<li>Alpha Spending Function</li>
+<li>Sample Size Re-Estimation</li>
+<li>Conditional Power</li>
+</ul>
+</div>
+<div id="comparing-variabilities" class="section level3">
+<h3><span class="header-section-number">7.11.8</span> Comparing Variabilities</h3>
+<ul>
+<li>Comparing Intra-Subject Variabilities</li>
+<li>Comparing Intra-Subject CVs</li>
+<li>Comparing Inter-Subject Variabilities</li>
+<li>Comparing Total Variabilities</li>
+</ul>
+</div>
+<div id="bioequivalence-testing" class="section level3">
+<h3><span class="header-section-number">7.11.9</span> Bioequivalence Testing</h3>
+<ul>
+<li>Bioequivalence Criteria</li>
+<li>Average Bioequivalence</li>
+<li>Population Bioequivalence</li>
+<li>Individual Bioequivalence</li>
+<li>In Vitro Bioequivalence</li>
+</ul>
+</div>
+<div id="dose-response-studies" class="section level3">
+<h3><span class="header-section-number">7.11.10</span> Dose Response Studies</h3>
+<ul>
+<li>Continuous Response</li>
+<li>Binary Response</li>
+<li>Time-to-Event Endpoint</li>
+<li>Williams’ Test for Minimum Effective Dose (MED)</li>
+<li>Cochran–Armitage’s Test for Trend</li>
+<li>Dose Escalation Trials</li>
+</ul>
+</div>
+<div id="microarray-studies" class="section level3">
+<h3><span class="header-section-number">7.11.11</span> Microarray Studies</h3>
+<ul>
+<li>Literature Review</li>
+<li>False Discovery Rate (FRD) Control</li>
+<li>Family-Wise Error Rate (FWER) Control</li>
+</ul>
+</div>
+<div id="bayesian-sample-size-calculation" class="section level3">
+<h3><span class="header-section-number">7.11.12</span> Bayesian Sample Size Calculation</h3>
+<ul>
+<li>Posterior Credible Interval Approach</li>
+<li>Posterior Error Approach</li>
+<li>The Bootstrap-Median Approach</li>
+</ul>
+</div>
+<div id="nonparametrics" class="section level3">
+<h3><span class="header-section-number">7.11.13</span> Nonparametrics</h3>
+<ul>
+<li>Violation of Assumptions</li>
+<li>One-Sample Location Problem</li>
+<li>Two-Sample Location Problem</li>
+<li>Test for Independence</li>
+</ul>
+</div>
+<div id="sample-size-calculation-in-other-areas" class="section level3">
+<h3><span class="header-section-number">7.11.14</span> Sample Size Calculation in Other Areas</h3>
+<ul>
+<li>QT/QTc Studies with Time-Dependent Replicates</li>
+<li>Propensity Analysis in Nonrandomized Studies</li>
+<li>ANOVA with Repeated Measures</li>
+<li>Quality of Life</li>
+<li>Bridging Studies</li>
+<li>Vaccine Clinical Trials</li>
+</ul>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="sample-distribution-and-confidence-interval.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="usual-statistical-tests-by-goals.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="study-design-in-traditional-surveys.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="statistical-modelling-in-epidemiology.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
