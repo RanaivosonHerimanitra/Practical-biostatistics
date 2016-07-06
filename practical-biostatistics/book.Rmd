@@ -50,7 +50,7 @@ When designing an experiment, one needs to define hypotheses testing:
 * An alternative hypothesis
 
 Once, they are defined, you can predict the range of values for your statistics of interest that you expect to see if the null hypothesis is true. After data collection, you calculate your statistics and its <code>p-value</code>. If <code>p-value</code> is small enough (let's say less than 5%), you encounter a statistics that is not expect (because It is less than 5%) based on null hypothesis an vice versa.
-The statistical power is the probability of finding true effect when It actually exists. It directly relates to incertainty during our decision to reject or null the null hypothesis.
+The statistical power is the probability of finding true effect when It actually exists. It directly relates to incertainty during our decision to reject or not the null hypothesis.
 
 **Summary:**
 
