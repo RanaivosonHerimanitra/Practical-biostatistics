@@ -55,8 +55,8 @@ $$ P(X \leq A)= \int_0^A e^{-t}dt $$
 In a graph, the CDF looks like this:
 
 ```{r,echo=F}
-x=seq(0.5,15.0,by=0.5)
-y= exp(-x)
+x=seq(0.0,15.0,by=0.5)
+y= exp(-x) -1
 plot(x,y,"l")
 ```
 
@@ -356,7 +356,7 @@ Clinical trial can be divided in 02 groups depending on their goal:
 
 
 
-# Statistical modelling in Epidemiology:
+# Statistical modelling and data analysis in Epidemiology (clinical trials):
 
 # Application in development economics:
 
