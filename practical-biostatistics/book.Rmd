@@ -44,11 +44,11 @@ $$ \sigma = \sqrt {p(1-p)} $$
 
 ## Exponential distribution:
 
-This kind of this distribution is used for survival analysis. Its probability distribution is written as follows:
+This kind of this distribution is used for survival analysis. Its probability distribution with parameter $\lambda$ is written as follows:
 
-$$ P(X=t)= e^{-t} $$
+$$ P(X=t)= \lambda e^{-\lambda t} $$
 
-and its cumulative distribution function (CDF) is:
+and its cumulative distribution function (CDF) for $\lambda=1$ is:
 
 $$ P(X \leq A)= \int_0^A e^{-t}dt $$ 
 
@@ -59,6 +59,21 @@ x=seq(0.0,15.0,by=0.5)
 y= exp(-x) -1
 plot(x,y,"l")
 ```
+
+* Application:
+
+Suppose that survival drops off rapidly in the year following diagnosis of a certain type of advanced cancer. Suppose that the length of survival (time-to-death) is a random variable that approximately follows an _exponential distribution_ with $\lambda= 2$ .
+
+Probability distribution is : $P(X=t)= 2e^{-2t}$
+
+*Question* : What is the probability that a person who is diagnosed with this illness will survives a year?
+
+The probability of dying within one year can be calculated using the CDF:
+
+$$ P(X \leq 1)= 1- e^{-2} $$ 
+
+The chance of surviving past one (01) year is: $P(X \ge 1)=1-P(X \leq 1)=13.5$
+
 
 ## Normal distribution
 
@@ -82,12 +97,36 @@ The statistical power is the probability of finding true effect when It actually
 
 The probability to reject the _null hypothesis_ when an _alternative hypothesis_ is true, under a certain study conditions, is then called power of a statistical test. Suppose we are a given statistic on mean weight (55 kg) of population in a given village. We are interested in a nutritional survey that concerns people with a mean weight of 50 with a standard deviation of 5kg. We randomly sampled 35 people and then asked to find true population mean of 50 at the 5% level of significance. The probability associated with this level of confidence is called **_statistical power_**.
 
-# Usual Statistical tests by type of variables:
 
-## Testing independence between two categorical variables:
-This kind of test is often used in statistical genetics to measure linkage disequilibrium (LD) for gene mapping.
 
-# Usual Statistical tests by goals:
+# Overview of statistical tests:
+
+
+Choosing the right test or analysis may sound tricky. This chapter attempts to bridge the gap by trying to gather most commonly used statistical tests and suitable analysis for a given statistical works.
+
+In fact, the choice of analysis depends on 03 parts:
+
+ * based on type of outcome variable(s): continuous, categorical, time-to-event
+ 
+ * based on independance between variables (covariates, outcome)
+ 
+ * based on distribution of data (outcome variable(s))
+ 
+This table provides a summary of main analysis that could be performed stratified by previous factors:
+
+```{r,echo=F,out.extra='',comment='', message=FALSE , warning=FALSE}
+
+df=data.frame(Outcome=c("Continuous","Binary or Categorical","Time-to-event"),
+              Independant=c("t-test, ANOVA, Linear correlation, Linear regression",
+                      "Odds-ratio/relative risks, Chi2 test, Logistic regression",
+                      "Kaplan-Meier, Cox regression"),
+              Correlated =c("Paired t-test, repeated measures ANOVA, mixed models/GEE modeling","McNemar test,GEE modeling","Frailty model"),
+             
+              Alternatives=c("When standard assumption is violated, use wilcoxon rank-sum test, wilcoxon sign-rank test, Kruskall-Wallis test, Spearman rank test, correlation coefficient","When standard assumption is violated, use Fisher exact test, McNemar exact test","Time-varying effects"))
+knitr::kable(df,caption="Summary of statistical test and analysis")
+```
+
+# Usual Statistical tests:
 
 ## Comparison of proportions:
 
@@ -131,6 +170,7 @@ Is used to compare at least 02 observed medians.
 
 ### Fisher-Snedecor and Ansari-Bradley tests:
 Are used to compare two observed variance.
+
 ### Bartlett and Fligner- Killeen tests:
 Are used to compare at least 02 observed variances.
 
@@ -367,8 +407,6 @@ Clinical trial can be divided in 02 groups depending on their goal:
 Is used to jointly assess effects of multiple covariates on an outcome.???
 
 ## logistic regression and odds-ratio :
-
-**Roadmap**
 
 * Crude odds-ratio
 * Don't forget to mention formula of Mantel-Haenszel 

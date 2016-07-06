@@ -38,8 +38,8 @@ MathJax.Hub.Config({
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="probability-distribution.html">
+<link rel="prev" href="type-of-uncertainty-and-statistical-power.html">
+<link rel="next" href="usual-statistical-tests.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -163,22 +163,55 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Practical Biostatistics</h1>
-<h4 class="author"><em>Herimanitra RANAIVOSON</em></h4>
-<h4 class="date"><em>2016-07-06</em></h4>
-</div>
-<div id="about-this-book" class="section level1">
-<h1><span class="header-section-number">1</span> About this book:</h1>
-<p>A curated list of resources for statisticians, social scientists, biologists, students involved in data analysis and interpretation tasks such as inferential statistics, Bioinformatics. All with straightforward application using R and/or Python programming languages.</p>
+<div id="overview-of-statistical-tests" class="section level1">
+<h1><span class="header-section-number">4</span> Overview of statistical tests:</h1>
+<p>Choosing the right test or analysis may sound tricky. This chapter attempts to bridge the gap by trying to gather most commonly used statistical tests and suitable analysis for a given statistical works.</p>
+<p>In fact, the choice of analysis depends on 03 parts:</p>
+<ul>
+<li><p>based on type of outcome variable(s): continuous, categorical, time-to-event</p></li>
+<li><p>based on independance between variables (covariates, outcome)</p></li>
+<li><p>based on distribution of data (outcome variable(s))</p></li>
+</ul>
+<p>This table provides a summary of main analysis that could be performed stratified by previous factors:</p>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Table 4.1: </span>Summary of statistical test and analysis</caption>
+<thead>
+<tr class="header">
+<th align="left">Outcome</th>
+<th align="left">Independant</th>
+<th align="left">Correlated</th>
+<th align="left">Alternatives</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Continuous</td>
+<td align="left">t-test, ANOVA, Linear correlation, Linear regression</td>
+<td align="left">Paired t-test, repeated measures ANOVA, mixed models/GEE modeling</td>
+<td align="left">When standard assumption is violated, use wilcoxon rank-sum test, wilcoxon sign-rank test, Kruskall-Wallis test, Spearman rank test, correlation coefficient</td>
+</tr>
+<tr class="even">
+<td align="left">Binary or Categorical</td>
+<td align="left">Odds-ratio/relative risks, Chi2 test, Logistic regression</td>
+<td align="left">McNemar test,GEE modeling</td>
+<td align="left">When standard assumption is violated, use Fisher exact test, McNemar exact test</td>
+</tr>
+<tr class="odd">
+<td align="left">Time-to-event</td>
+<td align="left">Kaplan-Meier, Cox regression</td>
+<td align="left">Frailty model</td>
+<td align="left">Time-varying effects</td>
+</tr>
+</tbody>
+</table>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="probability-distribution.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="type-of-uncertainty-and-statistical-power.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="usual-statistical-tests.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
