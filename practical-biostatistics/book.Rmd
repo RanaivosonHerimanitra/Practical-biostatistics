@@ -118,7 +118,7 @@ This table provides a summary of main analysis that could be performed stratifie
 
 df=data.frame(Outcome=c("Continuous","Binary or Categorical","Time-to-event"),
               Independant=c("t-test, ANOVA, Linear correlation, Linear regression",
-                      "Odds-ratio/relative risks, Chi2 test, Logistic regression",
+                      "Odds-ratio/relative risks, Chi2 test, Multinomial/Logistic regression",
                       "Kaplan-Meier, Cox regression"),
               Correlated =c("Paired t-test, repeated measures ANOVA, mixed models/GEE modeling","McNemar test,GEE modeling","Frailty model"),
              
@@ -204,6 +204,18 @@ In case we have mixture of both types, we use variance analysis mainly using cor
 
 
 # Study design in traditional surveys:
+
+## Unequal Probabilities Sampling
+
+## Stratified Random Sampling
+
+ * Stratification proportional to size
+
+ * Neymar Optimal allocation 
+ 
+
+
+## Multistage Random Sampling
 
 # Study design in clinical trials:
 
