@@ -38,8 +38,8 @@ MathJax.Hub.Config({
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="non-parametric-versus-parametric-test-approach.html">
-<link rel="next" href="study-design-in-clinical-trials.html">
+<link rel="prev" href="about-this-book.html">
+<link rel="next" href="type-of-uncertainty-and-statistical-power.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -164,16 +164,48 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="study-design-in-traditional-surveys" class="section level1">
-<h1><span class="header-section-number">7</span> Study design in traditional surveys:</h1>
+<div id="probability-distribution" class="section level1">
+<h1><span class="header-section-number">2</span> Probability distribution</h1>
+<p>Statisticians never start out knowing the average in the population. They use sampling distribution to infer <strong>parameters</strong> of the population.</p>
+<div id="the-jargon" class="section level2">
+<h2><span class="header-section-number">2.1</span> The jargon:</h2>
+<p>Within a sample, we can calculate a statistic and get its <em>standard deviation</em> which is also called <em>standard error</em> . <em>standard deviation</em> reflects the <strong>spread</strong> of the distribution of the statistics we are interested in.</p>
+<p>We can do more with our sample by guessing its confident interval. A numerical interval from within which <strong>true</strong> parameters should fluctuate by calculating what we call <em>standard error</em> by the following formula:</p>
+<p><span class="math display">\[ SE=\sigma/\sqrt{n} \]</span></p>
+<p>In case of proportion (our statistics of interest), <em>standard error</em> can be written as follows:</p>
+<p><span class="math display">\[ SE=\sqrt{ p(1-p) / n }  \]</span></p>
+<p>where standard deviation of a binomial proportion is:</p>
+<p><span class="math display">\[ \sigma = \sqrt {p(1-p)} \]</span></p>
+</div>
+<div id="law-of-large-number-and-the-central-limit-theorem" class="section level2">
+<h2><span class="header-section-number">2.2</span> Law of large number and the Central Limit Theorem</h2>
+</div>
+<div id="binomial-distribution" class="section level2">
+<h2><span class="header-section-number">2.3</span> Binomial distribution</h2>
+</div>
+<div id="exponential-distribution" class="section level2">
+<h2><span class="header-section-number">2.4</span> Exponential distribution:</h2>
+<p>This kind of this distribution is used for survival analysis. Its probability distribution is written as follows:</p>
+<p><span class="math display">\[ P(X=t)= e^{-t} \]</span></p>
+<p>and its cumulative distribution function (CDF) is:</p>
+<p><span class="math display">\[ P(X \leq A)= \int_0^A e^{-t}dt \]</span></p>
+<p>In a graph, the CDF looks like this:</p>
+<p><img src="book_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="normal-distribution" class="section level2">
+<h2><span class="header-section-number">2.5</span> Normal distribution</h2>
+</div>
+<div id="assessing-normality-in-data" class="section level2">
+<h2><span class="header-section-number">2.6</span> Assessing normality in data</h2>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="non-parametric-versus-parametric-test-approach.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="study-design-in-clinical-trials.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="about-this-book.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="type-of-uncertainty-and-statistical-power.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

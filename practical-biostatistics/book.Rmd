@@ -16,7 +16,8 @@ description: "A curated list of resources for statisticians, social scientists, 
 
 A curated list of resources for statisticians, social scientists, biologists, students involved in data analysis and interpretation tasks such as inferential statistics, Bioinformatics. All with straightforward application using R and/or Python programming languages.
 
-# Sample distribution and confidence interval
+# Probability distribution
+
 
 Statisticians never start out knowing the average in the population. They use sampling 
 distribution to infer **parameters** of the population. 
@@ -39,6 +40,31 @@ $$ \sigma = \sqrt {p(1-p)} $$
 
 ## Law of large number and the Central Limit Theorem 
 
+## Binomial distribution
+
+## Exponential distribution:
+
+This kind of this distribution is used for survival analysis. Its probability distribution is written as follows:
+
+$$ P(X=t)= e^{-t} $$
+
+and its cumulative distribution function (CDF) is:
+
+$$ P(X \leq A)= \int_0^A e^{-t}dt $$ 
+
+In a graph, the CDF looks like this:
+
+```{r,echo=F}
+x=seq(0.5,15.0,by=0.5)
+y= exp(-x)
+plot(x,y,"l")
+```
+
+## Normal distribution
+
+## Assessing normality in data
+
+
 # Type of uncertainty and statistical power:
 
 Statistical power is the dark side of sample size calculation. Survey statisticians often get confused because they used to apply classical sampling theories drawn from survey design methodologies (strata allocation, multistage sampling,etc.) whereas Biostatisticians are more likely to encounter the former when designing their randomized controlled trial studies. As a Biostatistician, you need to master both as health studies may be observational as well as experimental like RCT. So what is statistical power ?
@@ -56,9 +82,28 @@ The statistical power is the probability of finding true effect when It actually
 
 The probability to reject the _null hypothesis_ when an _alternative hypothesis_ is true, under a certain study conditions, is then called power of a statistical test. Suppose we are a given statistic on mean weight (55 kg) of population in a given village. We are interested in a nutritional survey that concerns people with a mean weight of 50 with a standard deviation of 5kg. We randomly sampled 35 people and then asked to find true population mean of 50 at the 5% level of significance. The probability associated with this level of confidence is called **_statistical power_**.
 
+# Usual Statistical tests by type of variables:
+
+## Testing independence between two categorical variables:
+This kind of test is often used in statistical genetics to measure linkage disequilibrium (LD) for gene mapping.
+
 # Usual Statistical tests by goals:
 
 ## Comparison of proportions:
+
+**Context:**
+
+We would like to draw conclusion on 02 population proportions $$ D=p{1} - p{2} $$ 
+
+For example, we may want to know if proportion of Malaria occurrence in Rural area is significantly different from urban one. All we need to do is to build a confidence interval for $$ D $$ then make our conclusion. Our confidence interval relies on normal distribution of the difference between the 02 proportions under certain conditions which must be fulfilled:
+
+(1) $$ n{1}p{1}>10 $$ 
+
+(2) $$ n{1}(1-p{1})>10 $$ 
+
+(3) $$ n{2}p{2}>10 $$ 
+
+(4) $$ n{2}(1-p{2})>10 $$
 
 ### Chisquare test
 
@@ -107,28 +152,16 @@ Non parametric tests approach construct statistic test based on the sample distr
 ## Different types of variables association:
 
 Depending on types of variables, we may encounter 03 cases:
+
 * When variables are quantitative variables, we use coefficient of correlation to measure their association. 03 outcomes are possible: negatively correlated(-1), positively correlated (+1) and no correlation (0).
+
 * When variables are categorical, we use chi square distribution to measure their distance compared to an independence situation.
 
 In case we have mixture of both types, we use variance analysis mainly using correlation
 
-## Testing independence between two categorical variables:
-This kind of test is often used in statistical genetics to measure linkage disequilibrium (LD) for gene mapping.
 
-## Testing difference between two sample mean:
 
-## Testing difference between 02 proportions:
 
-**Context**
-We would like to draw conclusion on 02 population proportions $$ D=p{1} - p{2} $$ . For example, we may want to know if proportion of Malaria occurrence in Rural area is significantly different from urban one. All we need to do is to build a confidence interval for $$ D $$ then make our conclusion. Our confidence interval relies on normal distribution of the difference between the 02 proportions under certain conditions which must be fulfilled:
-
-(1) $$ n{1}p{1}>10 $$ 
-
-(2) $$ n{1}(1-p{1})>10 $$ 
-
-(3) $$ n{2}p{2}>10 $$ 
-
-(4) $$ n{2}(1-p{2})>10 $$
 
 # Study design in traditional surveys:
 
