@@ -175,13 +175,13 @@ MathJax.Hub.Config({
 <div id="comparison-of-proportions-from-independant-samples" class="section level2">
 <h2><span class="header-section-number">5.1</span> Comparison of proportions from independant samples:</h2>
 <p><strong>Context:</strong></p>
-<p>We would like to draw conclusion on 02 population proportions <span class="math display">\[ D=p{1} - p{2} \]</span></p>
+<p>We would like to draw conclusion on 02 population proportions <span class="math display">\[ D=p_{1} - p_{2} \]</span></p>
 <p>For example, we may want to know if proportion of Malaria occurrence in Rural area is significantly different from urban one. All we need to do is to build a confidence interval for <span class="math inline">\(D\)</span> then make our conclusion. Our confidence interval relies on normal distribution of the difference between the 02 proportions under certain conditions which must be fulfilled:</p>
 <ol style="list-style-type: decimal">
-<li><p><span class="math display">\[ n{1}p{1}&gt;10 \]</span></p></li>
-<li><p><span class="math display">\[ n{1}(1-p{1})&gt;10 \]</span></p></li>
-<li><p><span class="math display">\[ n{2}p{2}&gt;10 \]</span></p></li>
-<li><p><span class="math display">\[ n{2}(1-p{2})&gt;10 \]</span></p></li>
+<li><p><span class="math display">\[ n_{1}p_{1}&gt;10 \]</span></p></li>
+<li><p><span class="math display">\[ n_{1}(1-p_{1})&gt;10 \]</span></p></li>
+<li><p><span class="math display">\[ n_{2}p_{2}&gt;10 \]</span></p></li>
+<li><p><span class="math display">\[ n_{2}(1-p_{2})&gt;10 \]</span></p></li>
 </ol>
 <div id="chisquare-test" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Chisquare test</h3>
@@ -199,10 +199,10 @@ MathJax.Hub.Config({
 <h3><span class="header-section-number">5.2.1</span> McNemar test:</h3>
 <p>It consists of testing independance of an explanatory variable <span class="math inline">\(X\)</span> before and after a treatment and an outcome variable <span class="math inline">\(Y\)</span> (example: survived/died, healthy/sick ) most of the time a binary response variable. Those variables are selected among the same individuals which is also called paired sample.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-3">Table 5.1: </span>Summary</caption>
+<caption><span id="tab:unnamed-chunk-3">Table 5.1: </span>Paired contingency table</caption>
 <thead>
 <tr class="header">
-<th align="left">Variables</th>
+<th align="left">VariablesXY</th>
 <th align="left">SickAfter</th>
 <th align="left">HealthyAfter</th>
 <th align="left">Total</th>
@@ -211,24 +211,27 @@ MathJax.Hub.Config({
 <tbody>
 <tr class="odd">
 <td align="left">Sick before</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">a</td>
+<td align="left">b</td>
+<td align="left">a+b</td>
 </tr>
 <tr class="even">
 <td align="left">Healthy before</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">c</td>
+<td align="left">d</td>
+<td align="left">c+d</td>
 </tr>
 <tr class="odd">
 <td align="left">Total</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">a+c</td>
+<td align="left">b+d</td>
+<td align="left">N</td>
 </tr>
 </tbody>
 </table>
+<p><span class="math inline">\(H_{0}\)</span> the null hypothesis states that covariate X (before and after treatment) is independent of outcome Y (Sick/Healthy): <span class="math inline">\(p_{a}=p_{b}\)</span></p>
+<p><span class="math inline">\(H_{1}\)</span> alternative one is <span class="math inline">\(p_{a} \neq p_{b}\)</span></p>
+<p>The MacNemar test statistics: <span class="math inline">\(\frac{(b-c)^2}{(b+c)}\)</span> follows a <em>chisquare</em> distribution with 1 degree of freedom when we have a sufficiently large number of discordants cells <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> .</p>
 </div>
 </div>
 <div id="comparison-of-means" class="section level2">

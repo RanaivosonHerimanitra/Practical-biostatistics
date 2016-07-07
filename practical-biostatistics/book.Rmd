@@ -12,7 +12,7 @@ github-repo: RanaivosonHerimanitra/Practical-biostatistics
 description: "A curated list of resources for statisticians, social scientists, biologists, students involved in data analysis and interpretation tasks such as inferential statistics, Bioinformatics. All with straightforward application using R and/or Python programming languages."
 ---
 
-# About this book:
+# About this book
 
 A curated list of resources for statisticians, social scientists, biologists, students involved in data analysis and interpretation tasks such as inferential statistics, Bioinformatics. All with straightforward application using R and/or Python programming languages.
 
@@ -22,17 +22,17 @@ A curated list of resources for statisticians, social scientists, biologists, st
 Statisticians never start out knowing the average in the population. They use sampling 
 distribution to infer **parameters** of the population. 
 
-## The jargon:
+## The jargon
 
 Within a sample, we can calculate a statistic and get its _standard deviation_ which is also called _standard error_ . _standard deviation_ reflects the **spread** of the distribution of the statistics we are interested in.
 
 We can do more with our sample by guessing its confident interval. A numerical interval from within which **true** parameters should fluctuate by calculating what we call _standard error_ by the following formula:
 
-$$ SE=\sigma/\sqrt{n} $$
+$$ SE=\frac { \sigma}{\sqrt{n}} $$
 
 In case of proportion (our statistics of interest), _standard error_ can be written as follows:
 
-$$ SE=\sqrt{ p(1-p) / n }  $$
+$$ SE=\sqrt{ \frac{ p(1-p)}{n} }  $$
 
 where standard deviation of a binomial proportion is:
 
@@ -132,17 +132,17 @@ knitr::kable(df,caption="Summary of statistical test and analysis")
 
 **Context:**
 
-We would like to draw conclusion on 02 population proportions $$ D=p{1} - p{2} $$ 
+We would like to draw conclusion on 02 population proportions $$ D=p_{1} - p_{2} $$ 
 
 For example, we may want to know if proportion of Malaria occurrence in Rural area is significantly different from urban one. All we need to do is to build a confidence interval for $D$ then make our conclusion. Our confidence interval relies on normal distribution of the difference between the 02 proportions under certain conditions which must be fulfilled:
 
-(1) $$ n{1}p{1}>10 $$ 
+(1) $$ n_{1}p_{1}>10 $$ 
 
-(2) $$ n{1}(1-p{1})>10 $$ 
+(2) $$ n_{1}(1-p_{1})>10 $$ 
 
-(3) $$ n{2}p{2}>10 $$ 
+(3) $$ n_{2}p_{2}>10 $$ 
 
-(4) $$ n{2}(1-p{2})>10 $$
+(4) $$ n_{2}(1-p_{2})>10 $$
 
 ### Chisquare test
 
@@ -157,12 +157,18 @@ For example, we may want to know if proportion of Malaria occurrence in Rural ar
 It consists of testing independance of an explanatory variable $X$ before and after a treatment and an outcome variable $Y$ (example: survived/died, healthy/sick ) most of the time a binary response variable. Those variables are selected among the same individuals which is also called paired sample.
 
 ```{r,echo=F,out.extra='',comment='', message=FALSE , warning=FALSE}
-df =data.frame(Variables=c("Sick before","Healthy before","Total"),
-               SickAfter=c("","",""),
-               HealthyAfter=c("","",""),
-               Total= c("","",""))
+df =data.frame(VariablesXY=c("Sick before","Healthy before","Total"),
+               SickAfter=c("a","c","a+c"),
+               HealthyAfter=c("b","d","b+d"),
+               Total= c("a+b","c+d","N"))
 knitr::kable(df,caption="Paired contingency table")
 ```
+
+$H_{0}$ the null hypothesis states that covariate X (before and after treatment) is independent of outcome Y (Sick/Healthy): $p_{a}=p_{b}$
+
+$H_{1}$ alternative one is $p_{a} \neq p_{b}$
+
+The MacNemar test statistics: $\frac{(b-c)^2}{(b+c)}$ follows a *chisquare* distribution with 1 degree of freedom when we have a sufficiently large number of discordants cells $b$ and $c$ .
 
 ## Comparison of means:
 
