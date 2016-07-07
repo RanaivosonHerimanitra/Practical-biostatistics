@@ -128,13 +128,13 @@ knitr::kable(df,caption="Summary of statistical test and analysis")
 
 # Usual Statistical tests:
 
-## Comparison of proportions:
+## Comparison of proportions from independant samples:
 
 **Context:**
 
 We would like to draw conclusion on 02 population proportions $$ D=p{1} - p{2} $$ 
 
-For example, we may want to know if proportion of Malaria occurrence in Rural area is significantly different from urban one. All we need to do is to build a confidence interval for $$ D $$ then make our conclusion. Our confidence interval relies on normal distribution of the difference between the 02 proportions under certain conditions which must be fulfilled:
+For example, we may want to know if proportion of Malaria occurrence in Rural area is significantly different from urban one. All we need to do is to build a confidence interval for $D$ then make our conclusion. Our confidence interval relies on normal distribution of the difference between the 02 proportions under certain conditions which must be fulfilled:
 
 (1) $$ n{1}p{1}>10 $$ 
 
@@ -149,6 +149,20 @@ For example, we may want to know if proportion of Malaria occurrence in Rural ar
 ### Fisher exact test
 
 ### Mantel-Haenszel test
+
+## Comparison of proportions from paired samples:
+
+### McNemar test:
+
+It consists of testing independance of an explanatory variable $X$ before and after a treatment and an outcome variable $Y$ (example: survived/died, healthy/sick ) most of the time a binary response variable. Those variables are selected among the same individuals which is also called paired sample.
+
+```{r,echo=F,out.extra='',comment='', message=FALSE , warning=FALSE}
+df =data.frame(Variables=c("Sick before","Healthy before","Total"),
+               SickAfter=c("","",""),
+               HealthyAfter=c("","",""),
+               Total= c("","",""))
+knitr::kable(df,caption="Paired contingency table")
+```
 
 ## Comparison of means:
 
